@@ -4,6 +4,28 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+const x = 2;
+
+function f() {
+
+  const y = 3; 
+
+  console.log (x + y) // can't add z because it is another layer deep 
+
+  function g() {
+
+    const z = 4;
+
+    console.log (x + y + z);
+  }
+
+  g();
+}
+
+f();
+
+
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
